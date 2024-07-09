@@ -51,7 +51,7 @@ jobs:
     # - name: Build and push Docker image
     #   run: |
     # - name: Build the Docker image
-    #   run: docker build . --file Dockerfile --tag django:$(date +%s)
+    #   run: docker build . --file Dockerfile --tag django:$(date +%s) | pwd |ls
       
     #     # # docker buildx build --platform linux/amd64,linux/arm64 -t "${{ secrets.DOCKERHUB_USERNAME }}"/django:latest .
     #     # # docker push sawangautam172@gmail.com/django:latest .
