@@ -47,7 +47,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v4
       with:
-       context: django-on-docker/
+       context: django-on-docker/app/
        push: true
        tags: sawangautam172/githubactionpushed:latest
 
