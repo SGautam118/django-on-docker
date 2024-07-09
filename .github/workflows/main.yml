@@ -45,7 +45,7 @@ jobs:
         DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build and push Docker image
       run: |
-        docker build -t sawangautam172/djangolatest .
+        docker build -t sawangautam172/django:latest .
         docker push sawangautam172/django:latest
 
     # - name: Build and push Docker image
