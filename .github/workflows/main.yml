@@ -26,13 +26,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r app/requirements.txt
 
-    # - name: Run Tests
-    #   run: |
-    #     python django_project/manage.py test
+    - name: Run Tests
+      run: |
+        python app/manage.py test
 
-    - name: Login to Docker Hub
-      uses: ./
-      with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+    # - name: Login to Docker Hub
+    #   uses: ./
+    #   with:
+    #       username: ${{ secrets.DOCKERHUB_USERNAME }}
+    #       password: ${{ secrets.DOCKERHUB_TOKEN }}
       
