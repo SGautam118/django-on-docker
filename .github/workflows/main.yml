@@ -36,8 +36,7 @@ jobs:
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1  # Set up QEMU for building multi-platform images (optional)
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1  # Set up Docker Buildx for building multi-platform images
+
 
     - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
