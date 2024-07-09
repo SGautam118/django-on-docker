@@ -29,6 +29,11 @@ jobs:
     - name: Run Tests
       run: |
         python app/manage.py test
+    - name: Login to Docker Hub
+      run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+      # env:
+      #     DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      #     DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 
     # - name: Login to Docker Hub
     #   uses: ./
