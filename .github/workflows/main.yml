@@ -43,10 +43,6 @@ jobs:
       env:
         DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-    - name: Build and push Docker image
-      run: |
-        docker build -t sawangautam172/django:latest /app/Dockerfile .
-        docker push sawangautam172/django:latest /app/Dockerfile
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v4
