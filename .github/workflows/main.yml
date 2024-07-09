@@ -44,20 +44,20 @@ jobs:
         DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build and push Docker image
-      run: |
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag django:$(date +%s)
+    # - name: Build and push Docker image
+    #   run: |
+    # - name: Build the Docker image
+    #   run: docker build . --file Dockerfile --tag django:$(date +%s)
       
-        # # docker buildx build --platform linux/amd64,linux/arm64 -t "${{ secrets.DOCKERHUB_USERNAME }}"/django:latest .
-        # # docker push sawangautam172@gmail.com/django:latest .
-        # # Build the Docker image
-        # docker build -t "${{ secrets.DOCKERHUB_USERNAME }}"/django:latest .
+    #     # # docker buildx build --platform linux/amd64,linux/arm64 -t "${{ secrets.DOCKERHUB_USERNAME }}"/django:latest .
+    #     # # docker push sawangautam172@gmail.com/django:latest .
+    #     # # Build the Docker image
+    #     # docker build -t "${{ secrets.DOCKERHUB_USERNAME }}"/django:latest .
 
-        # # Tag the Docker image (if not tagged during build)
-        # docker sawan "${{ secrets.DOCKERHUB_USERNAME }}"/django:latest
+    #     # # Tag the Docker image (if not tagged during build)
+    #     # docker sawan "${{ secrets.DOCKERHUB_USERNAME }}"/django:latest
         
-        # # Push the Docker image to Docker Hub
-        # docker push "${{ secrets.DOCKERHUB_USERNAME }}"/django:latest
+    #     # # Push the Docker image to Docker Hub
+    #     # docker push "${{ secrets.DOCKERHUB_USERNAME }}"/django:latest
 
       
