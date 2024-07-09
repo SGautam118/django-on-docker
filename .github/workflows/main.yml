@@ -55,6 +55,6 @@ jobs:
         docker sawan "${{ secrets.DOCKERHUB_USERNAME }}"/django:latest
         
         # Push the Docker image to Docker Hub
-        docker push y"${{ secrets.DOCKERHUB_USERNAME }}"/django:latest
+        docker push "${{ secrets.DOCKERHUB_USERNAME }}"/django:latest
 
       
